@@ -2,9 +2,8 @@
   "name": "lamara-backend",
   "version": "1.0.0",
   "description": "Backend for Notion Integration",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "build": "echo 'Static site build'"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.14",
