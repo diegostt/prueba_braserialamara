@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carta de Brasería La Mara – Entrantes, mariscos, carnes a la brasa y postres caseros. Cocina extremeña en Badajoz.">
+  <title>Carta | Brasería La Mara</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">La Mara</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="carta.html" style="color:var(--text-primary)">Carta</a></li>
+        <li><a href="index.html#reservar">Reservar</a></li>
+        <li><a href="index.html#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Menu Page Hero -->
+  <section class="menu-page-hero">
+    <div class="container">
+      <p class="section-label center">Brasería La Mara</p>
+      <h1 class="section-title center">Nuestra <em>Carta</em></h1>
+      <div class="section-divider center"></div>
+      <p class="section-desc center">Productos frescos, ibéricos selectos y todo preparado al momento.</p>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <div class="container">
+
+      <!-- ALL MENU CATEGORIES -->
+      <div class="menu-categories-grid">
+
+      <!-- ENTRANTES -->
+      <div class="menu-category category-horizontal active" id="cat-entrantes">
+        <div class="menu-category-card cat-entrantes">
+          <div class="menu-header">
+            <h3 class="menu-category-title">Entrantes</h3>
+            <div class="menu-price-labels"><span>Tapa</span><span>Ración</span></div>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-item"><span class="item-name">Queso curado de oveja</span><span class="item-prices"><span>4 €</span><span>9 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Lomo ibérico de bellota</span><span class="item-prices"><span>5 €</span><span>16 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Jamón ibérico de bellota</span><span class="item-prices"><span>5 €</span><span>18 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Ensalada cuatro quesos</span><span class="item-prices"><span></span><span>11 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Patatas bravas</span><span class="item-prices"><span></span><span>6 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Ensalada de la casa</span><span class="item-prices"><span></span><span>12 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Croquetas caseras</span><span class="item-prices"><span>6 €</span><span>9 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Mejillones a la vinagreta</span><span class="item-prices"><span>6 €</span><span>9 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Ensalada mixta</span><span class="item-prices"><span>7 €</span><span>9 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Surtido de ibéricos</span><span class="item-prices"><span></span><span>15 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Anchoas de Santoña</span><span class="item-prices"><span>3 €</span><span>9 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DEL MAR -->
+      <div class="menu-category" id="cat-mar">
+        <div class="menu-category-card cat-mar">
+          <div class="menu-header">
+            <h3 class="menu-category-title">Del Mar</h3>
+            <div class="menu-price-labels"><span>Tapa</span><span>Ración</span></div>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-item"><span class="item-name">Pijotas</span><span class="item-prices"><span></span><span>10 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Bacalao a la plancha</span><span class="item-prices"><span></span><span>12 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Taquitos de bacalao a la sevillana</span><span class="item-prices"><span>7 €</span><span>10 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Chipirones plancha o rebozado</span><span class="item-prices"><span></span><span>10 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Adobo cazón</span><span class="item-prices"><span>6 €</span><span>9 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Calamares</span><span class="item-prices"><span>6 €</span><span>9 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Almejas a la marinera</span><span class="item-prices"><span></span><span>15 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Gambas al ajillo</span><span class="item-prices"><span></span><span>12 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Colas de langostino al ajillo</span><span class="item-prices"><span></span><span>11 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Boquerones fritos</span><span class="item-prices"><span>6 €</span><span>8 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Bacalao a la nata</span><span class="item-prices"><span>7 €</span><span>10 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Bacalao dorado</span><span class="item-prices"><span>7 €</span><span>10 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Pulpo a la brasa</span><span class="item-prices"><span></span><span>16 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Fritura variada</span><span class="item-prices"><span>9 €</span><span>15 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Puntillitas</span><span class="item-prices"><span>6 €</span><span>9 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Sepia plancha</span><span class="item-prices"><span></span><span>14 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Tortita de camarones</span><span class="item-prices"><span>6 €</span><span>8 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Rejos</span><span class="item-prices"><span>7 €</span><span>10 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARNES -->
+      <div class="menu-category" id="cat-carnes">
+        <div class="menu-category-card cat-carnes">
+          <div class="menu-header">
+            <h3 class="menu-category-title">Carnes a la Brasa</h3>
+            <div class="menu-price-labels"><span>Tapa</span><span>Ración</span></div>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-item"><span class="item-name">Chorizo a la brasa</span><span class="item-prices"><span>6 €</span><span>8 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Pollo a la brasa</span><span class="item-prices"><span>7 €</span><span>11 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Picaña</span><span class="item-prices"><span></span><span>18 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Pluma ibérica</span><span class="item-prices"><span></span><span>16 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Chuletón ternera extremeña</span><span class="item-prices"><span></span><span>20 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Solomillo ternera extremeña</span><span class="item-prices"><span></span><span>22 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Secreto ibérico</span><span class="item-prices"><span>7 €</span><span>14 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Carrillera</span><span class="item-prices"><span>7 €</span><span>12 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Lagarto ibérico</span><span class="item-prices"><span></span><span>15 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Abanico ibérico</span><span class="item-prices"><span></span><span>15 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Carne con tomate</span><span class="item-prices"><span>7 €</span><span>12 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Solomillo de cerdo<small class="item-note">Roquefort · Pimienta · Ajillo · Ajotostado · Rulo de cabra</small></span><span class="item-prices"><span>7 €</span><span>14 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Panceta</span><span class="item-prices"><span>6 €</span><span>10 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Pestorejo</span><span class="item-prices"><span>6 €</span><span>8 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Mollejas</span><span class="item-prices"><span>6 €</span><span>8 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Caracoles</span><span class="item-prices"><span></span><span>6 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- POSTRES -->
+      <div class="menu-category category-horizontal" id="cat-postres">
+        <div class="menu-category-card cat-postres">
+          <div class="menu-header">
+            <h3 class="menu-category-title">Postres Caseros</h3>
+          </div>
+          <div class="menu-grid">
+            <div class="menu-item"><span class="item-name">Tarta de queso casera</span><span class="item-prices single"><span>4 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Serradura casera</span><span class="item-prices single"><span>4 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Tarta de Ferrero</span><span class="item-prices single"><span>4 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Tarta de Kinder Bueno</span><span class="item-prices single"><span>4 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+            <div class="menu-item"><span class="item-name">Flan de huevo casero</span><span class="item-prices single"><span>4 €</span></span><button class="add-cart-btn" onclick="addToCart(this)" aria-label="Añadir">+</button></div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      <!-- END ALL MENU CATEGORIES -->
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container cta-banner-inner">
+      <h2>¿Te apetece?</h2>
+      <p>Reserva tu mesa y disfruta de la mejor brasa de Badajoz</p>
+      <a href="index.html#reservar" class="btn btn-primary">Reservar mesa</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="footer-logo">Brasería La Mara</h3>
+          <p>Cocina extremeña de brasa y tradición en el corazón de Badajoz.</p>
+        </div>
+
+        <div class="footer-info">
+          <h4>Horario</h4>
+          <p>Lunes y Martes — Cerrado</p>
+          <p>Mié – Jue – Dom<br>12:00–16:30 · 20:00–23:00</p>
+          <p>Viernes y Sábado<br>12:00–16:30 · 20:00–23:30</p>
+        </div>
+        <div class="footer-info">
+          <h4>Contacto</h4>
+          <p><a href="tel:+34635167201" style="color:var(--accent); font-weight:600;">+34 635 167 201</a></p>
+        </div>
+        <div class="footer-info">
+          <h4>Redes Sociales</h4>
+          <div class="social-links-container" style="display:flex; flex-direction:row; gap:12px;">
+            <a href="https://instagram.com/braseria_lamara" target="_blank" class="social-circle-link">
+              <div class="social-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </div>
+            </a>
+            <a href="https://facebook.com/braserialamara" target="_blank" class="social-circle-link">
+              <div class="social-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brasería La Mara</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

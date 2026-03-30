@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Brasería La Mara – Restaurante de brasas y cocina tradicional extremeña en Badajoz. Reserva tu mesa y disfruta de los mejores ibéricos y pescados.">
+  <title>Brasería La Mara | Restaurante en Badajoz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- Flatpickr Datepicker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">La Mara</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="carta.html">Carta</a></li>
+        <li><a href="#reservar">Reservar</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Scroll-Driven Video Section -->
+  <section id="inicio" class="hero-scroll-section">
+    <div class="hero-sticky">
+      <img id="hero-img-start" src="assets/cerrado.png" class="hero-media" alt="Brasería La Mara cerrado">
+      <canvas id="hero-canvas" class="hero-media"></canvas>
+      <img id="hero-img-end" src="assets/abierto.png" class="hero-media" alt="Brasería La Mara abierto">
+      <div class="hero-overlay" id="hero-overlay">
+        <div class="hero-content">
+          <h1 class="hero-title">Brasería<br><span>La Mara</span></h1>
+          <p class="hero-subtitle">Cocina de brasa y tradición extremeña en Badajoz</p>
+          <div class="hero-actions">
+            <a href="#reservar" class="btn btn-primary">Reservar mesa</a>
+            <a href="carta.html" class="btn btn-outline">Ver carta</a>
+          </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container cta-banner-inner">
+      <h2>Descubre nuestra <em
+          style="font-family:var(--font-display);color:var(--accent);">carta
+          completa</em></h2>
+      <p>Entrantes, mariscos, carnes a la brasa y postres caseros</p>
+      <a href="carta.html" class="btn btn-primary">Ver la carta</a>
+    </div>
+  </section>
+
+  <!-- Reservation Section -->
+  <section id="reservar" class="reservation-section">
+    <div class="container">
+      <div class="reservation-wrapper">
+        <div style="text-align:center; margin-bottom:40px;">
+          <p class="section-label center">Reserva tu mesa</p>
+          <h2 class="section-title center">Haz tu <em>reserva</em></h2>
+          <p class="section-desc center">Rellena el formulario y tendremos tu mesa lista. También puedes pedir para
+            llevar.</p>
+        </div>
+
+        <div style="position:relative;">
+          <form id="order-form" class="reservation-form" autocomplete="off">
+            <div class="form-group">
+              <label for="nombre">Nombre completo <span style="color:var(--accent)">*</span></label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre y apellidos" required>
+            </div>
+
+            <div class="form-group">
+              <label for="personas">Nº de personas <span style="color:var(--accent)">*</span></label>
+              <select id="personas" name="personas" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="1">1 persona</option>
+                <option value="2">2 personas</option>
+                <option value="3">3 personas</option>
+                <option value="4">4 personas</option>
+                <option value="5">5 personas</option>
+                <option value="6">6 personas</option>
+                <option value="7">7 personas</option>
+                <option value="8">8 personas</option>
+                <option value="9">9 personas</option>
+                <option value="10+">10 o más</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dia">Día de la reserva <span style="color:var(--accent)">*</span></label>
+                <div class="input-with-icon">
+                  <svg class="input-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  <input type="text" id="dia" name="dia" placeholder="Selecciona fecha" readonly required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="hora">Hora de la reserva <span style="color:var(--accent)">*</span></label>
+                <select id="hora" name="hora" required>
+                  <option value="" disabled selected>Selecciona hora</option>
+                </select>
+                <span class="form-hint" id="horario-hint"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Tu pedido <span style="color:var(--accent)">*</span></label>
+              
+              <div class="order-selector-container">
+                <div class="order-trigger" id="order-trigger">
+                  <span class="order-trigger-text" id="order-trigger-text">Crea tu pedido...</span>
+                  <div class="order-trigger-icon">+</div>
+                </div>
+                
+                <div class="order-popover" id="order-popover">
+                  <div class="order-search-box">
+                    <input type="text" id="order-search" placeholder="Buscar producto..." autocomplete="off">
+                  </div>
+                  <div class="order-list" id="order-list">
+                    <!-- Populated by script.js -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- Visual Chips/List of Selected Items -->
+              <div class="selected-items" id="selected-items"></div>
+              
+              <!-- Hidden input for the final order text being submitted -->
+              <input type="hidden" id="pedido" name="pedido" required>
+              
+            </div>
+
+            <div class="form-group">
+              <label>¿Comer aquí o para llevar? <span style="color:var(--accent)">*</span></label>
+              <div class="radio-group">
+                <label class="radio-card">
+                  <input type="radio" name="tipo" value="aqui" required>
+                  <span class="radio-content">
+                    <span>Comer aquí</span>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="tipo" value="llevar" required>
+                  <span class="radio-content">
+                    <span>Para llevar</span>
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <div class="order-total-display" style="padding-top: 10px; margin-bottom: 24px; border-top: none;">
+              <h3 class="total-label" style="font-size: 1rem; color: var(--text-muted);">TOTAL</h3>
+              <h3 class="total-price" id="order-total-price" style="font-size: 1.4rem; color: var(--accent);">0,00 €</h3>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submit-btn">
+              <span>Confirmar reserva</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contacto" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="footer-logo">Brasería La Mara</h3>
+          <p>Cocina extremeña de brasa y tradición en el corazón de Badajoz.</p>
+        </div>
+
+        <div class="footer-info">
+          <h4>Horario</h4>
+          <p>Lunes y Martes — Cerrado</p>
+          <p>Mié – Jue – Dom<br>12:00–16:30 · 20:00–23:00</p>
+          <p>Viernes y Sábado<br>12:00–16:30 · 20:00–23:30</p>
+        </div>
+        <div class="footer-info">
+          <h4>Contacto</h4>
+          <p><a href="tel:+34635167201" style="color:var(--accent); font-weight:600;">+34 635 167 201</a></p>
+        </div>
+        <div class="footer-info">
+          <h4>Redes Sociales</h4>
+          <div class="social-links-container" style="display:flex; flex-direction:row; gap:12px;">
+            <a href="https://instagram.com/braseria_lamara" target="_blank" class="social-circle-link">
+              <div class="social-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+              </div>
+            </a>
+            <a href="https://facebook.com/braserialamara" target="_blank" class="social-circle-link">
+              <div class="social-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d393.8!2d-6.9706!3d38.8794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd143650ca614e0f%3A0x73d48e25e2f2b62a!2sBraser%C3%ADa%20La%20Mara!5e0!3m2!1ses!2ses!4v1711800000000"
+          width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Mapa Brasería La Mara">
+        </iframe>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Brasería La Mara</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/es.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
