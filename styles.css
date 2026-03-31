@@ -1927,3 +1927,46 @@ span.flatpickr-weekday {
     font-size: 0.85rem;
   }
 }
+
+/* ===========================
+   FOOTER SCHEDULE RESTRUCTURE
+   =========================== */
+.footer-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.schedule-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.schedule-item .day {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+.schedule-item .hours {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.schedule-item .hours.closed {
+  color: var(--text-muted);
+  font-style: italic;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer-schedule {
+    align-items: center;
+    text-align: center;
+  }
+}
