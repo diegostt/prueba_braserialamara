@@ -741,7 +741,7 @@ document.addEventListener('DOMContentLoaded', initCustomSelects);
           fechaIso: fechaIso,
           hora: data.hora,
           personas: data.personas,
-          tipo: data.tipo,
+          tipo: data.tipo === 'aqui' ? 'Comer Aquí' : 'Para Llevar',
           pedido: orderLines.replace(/\\n/g, '\n'),
           total: orderTotal
         })
