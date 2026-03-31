@@ -718,7 +718,7 @@ document.addEventListener('DOMContentLoaded', initCustomSelects);
     const orderLines = cart.map(item => {
       const v = item.variant ? (item.variant === 'tapa' ? ' (Tapa)' : ' (Ración)') : '';
       return `${item.qty}x ${item.name}${v}`;
-    }).join('\n') || 'Sin pedido';
+    }).join(' + ') || 'Sin pedido';
 
     // Format ISO date (e.g., 2026-03-31T20:30:00.000Z)
     const [horas, minutos] = (data.hora || '12:00').split(':');
@@ -742,7 +742,7 @@ document.addEventListener('DOMContentLoaded', initCustomSelects);
           hora: data.hora,
           personas: data.personas,
           tipo: data.tipo === 'aqui' ? 'Comer Aquí' : 'Para Llevar',
-          pedido: orderLines.replace(/\\n/g, '\n'),
+          pedido: orderLines,
           total: orderTotal
         })
       });
