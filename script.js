@@ -717,7 +717,7 @@ document.addEventListener('DOMContentLoaded', initCustomSelects);
     // Build order summary
     const orderLines = cart.map(item => {
       const v = item.variant ? (item.variant === 'tapa' ? ' (Tapa)' : ' (Ración)') : '';
-      return `${item.qty}x ${item.name}${v}`;
+      return `x${item.qty} ${item.name}${v}`;
     }).join(' + ') || 'Sin pedido';
 
     // Format ISO date (e.g., 2026-03-31T20:30:00.000Z)
