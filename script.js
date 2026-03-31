@@ -729,8 +729,9 @@ document.addEventListener('DOMContentLoaded', initCustomSelects);
     const orderTotal = document.getElementById('order-total-price').textContent;
 
     try {
-      // Send to our backend
-      const response = await fetch('/api/reservar', {
+      const WEBHOOK_URL = 'https://hook.eu2.make.com/bhk3tc5y8los2pnoxv69h0hgduqppp0o';
+      
+      const response = await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -741,15 +742,13 @@ document.addEventListener('DOMContentLoaded', initCustomSelects);
           hora: data.hora,
           personas: data.personas,
           tipo: data.tipo,
-          pedido: orderLines,
+          pedido: orderLines.replace(/\\n/g, '\n'),
           total: orderTotal
         })
       });
 
-      const result = await response.json();
-      
-      if (!result.success) {
-        throw new Error(result.error || 'Error al guardar la reserva');
+      if (!response.ok) {
+        throw new Error('Error al enviar la reserva');
       }
     } catch (err) {
       console.error(err);
