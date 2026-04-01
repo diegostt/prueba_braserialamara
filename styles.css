@@ -1801,6 +1801,121 @@ span.flatpickr-weekday {
 }
 
 /* ===========================
+   CTA BANNER (ANIMATED BACKGROUND)
+   =========================== */
+.cta-banner {
+  position: relative;
+  height: 520px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: #000;
+}
+
+.cta-bg-animation {
+  position: absolute;
+  inset: -10% -20%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  transform: rotate(-10deg);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.cta-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cta-strip img {
+  width: 100%;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  filter: grayscale(20%) brightness(0.85);
+  transition: filter 0.5s var(--ease);
+}
+
+.strip-up {
+  animation: scrollUp 60s linear infinite;
+}
+
+.strip-down {
+  animation: scrollDown 60s linear infinite;
+}
+
+.cta-strip:nth-child(2) { animation-duration: 45s; }
+.cta-strip:nth-child(3) { animation-duration: 55s; }
+.cta-strip:nth-child(4) { animation-duration: 50s; }
+
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, 
+    var(--bg-primary) 0%, 
+    rgba(7, 7, 7, 0.4) 30%, 
+    rgba(7, 7, 7, 0.4) 70%, 
+    var(--bg-primary) 100%
+  ),
+  radial-gradient(circle at center, transparent 0%, var(--bg-primary) 90%);
+  z-index: 1;
+}
+
+.cta-banner-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.cta-content {
+  max-width: 650px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cta-content .section-title {
+  margin-top: 10px;
+  line-height: 1.0;
+}
+
+.cta-content .section-desc {
+  margin: 20px auto 35px;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .cta-banner {
+    height: 440px;
+  }
+  .cta-bg-animation {
+    grid-template-columns: repeat(2, 1fr);
+    inset: -5% -10%;
+    gap: 15px;
+    transform: rotate(-5deg);
+  }
+  .cta-strip:nth-child(n+3) {
+    display: none;
+  }
+}
+
+/* ===========================
    RESPONSIVE
    =========================== */
 @media (max-width: 900px) {
