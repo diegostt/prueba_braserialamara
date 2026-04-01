@@ -1579,7 +1579,7 @@ span.flatpickr-weekday {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  padding-bottom: 20px;
+  padding: 0 16px 20px;
   border-bottom: 1px solid var(--border);
   margin-bottom: 8px;
   position: relative;
@@ -1615,6 +1615,7 @@ span.flatpickr-weekday {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--text-muted);
+  margin-right: 44px;
 }
 
 .menu-price-labels span {
@@ -2024,6 +2025,11 @@ span.flatpickr-weekday {
   .menu-category-card {
     padding: 20px 14px;
     border-radius: var(--radius-lg);
+  }
+
+  .menu-header {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .menu-category-title {
